@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="position-relative py-5">
+  <div class="bookmark_items container">
+    <h1 class="py-2">Bookmarker</h1>
+
+    <div class="bookmark_info d-flex flex-column justify-content-center align-items-center mt-5 p-3 pt-4 g-2">
+      <h2>
+        <i class="fa-solid fa-bookmark icon_1"></i>
+        Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+      <div class="bookmark-site-items w-100 d-flex flex-column justify-content-center ">
+        <label for="site-name" class="pb-2 mt-4">
+          <i class="fa-solid fa-book-bookmark pe-1"></i>
+          <span>Site Name</span>
+        </label>
+        <input type="text" oninput="validationName()" name="site-name" id="siteName" class="form-control"
+          placeholder="Bookmark Name">
+
+        <label for="site-url" class="pb-2 mt-4">
+          <i class="fa-solid fa-link pe-1"></i>
+          <span>Site URL</span>
+        </label>
+        <input type="url" oninput="validationurl()" name="site-url" id="siteUrl" class="form-control"
+          placeholder="Website URL">
+
+        <button onclick="add_bookmark()" id="submitBtn" class="btn btn-sub px-5 mb-3">Submit</button>
+      </div>
+    </div>
+
+    <div class="bookmrak-tabel">
+      <table class="table mt-4 text-center">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="main-page position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none" id="errorbox">
+    <div class="error-box bg-white shadow-lg rounded d-flex flex-column justify-content-center align-items-center p-4">
+      <div class="circle-box w-100 d-flex justify-content-between align-items-center pb-2">
+        <div class="circles d-flex">
+          <span class="d-block me-2 circle-1"></span>
+          <span class="d-block me-2 circle-2"></span>
+          <span class="d-block me-2 circle-3"></span>
+        </div>
+        <button class="border-0 btn" id="closebox">
+          <i class="fa-solid fa-xmark close fs-3"></i>
+        </button>
+      </div>
+      <p class="pb-1 mt-3">Site Name or Url is not valid, Please follow the rules below :</p>
+      <div class="rules">
+        <div>
+          <i class="fa-regular fa-circle-right p-2"></i>
+          Site name must contain at least 3 characters
+        </div>
+        <div>
+          <i class="fa-regular fa-circle-right p-2"></i>
+          Site URL must be a valid one
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

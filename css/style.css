@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #F7ECDE;
+  font-family: "PT Sans Caption", sans-serif;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #fec260;
+  color: #352e28;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  font-weight: 500;
+  color: rgb(53, 46, 40);
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+h1::after {
+  content: "";
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  background-color: #fec260;
+  z-index: -1;
+  transition: height 0.5s;
+}
+
+h1:hover::after {
+  height: 50%;
+}
+
+.bookmark_info {
+  border-top: 2px dotted #352e28;
+  border-bottom: 2px dotted #352e28;
+}
+
+.bookmark_info h2 {
+  font-family: "Righteous", sans-serif;
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  color: transparent;
+}
+
+.bookmark-site-items span {
+  font-weight: 600;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+.form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 4px #fec26055;
+}
+
+table {
+  vertical-align: middle !important;
+}
+
+.btn-sub {
+  width: fit-content;
+  background-color: #d1512d;
+  margin: auto;
+  margin-top: 30px;
+  color: white;
+}
+
+.btn-sub:hover {
+  background-color: #bb4120;
+  color: white;
+}
+
+.btn-visit {
+  color: white;
+  background-color: #9eb23b;
+}
+
+.btn-visit:hover {
+  color: white;
+  background-color: #8a9e23;
+  border-color: #6e8018;
+}
+
+.btn-delete {
+  background-color: #eb1d36;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #d30820;
+  border-color: #ba081d;
+  color: white;
+}
+
+.error-box {
+  width: 500px;
+  z-index: 10;
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error-box .circle-box .circle-1 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f15f5d;
+}
+
+.error-box .circle-box .circle-2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #febe2e;
+}
+
+.error-box .circle-box .circle-3 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4db748;
+}
+
+.error-box p {
+  font-family: "Bree Serif", serif;
+  font-size: 21px;
+  line-height: 1.3;
+  color: #352e28;
+}
+
+.main-page {
+  background-color: #0007;
+}
+
+.rules {
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.rules i {
+  color: #BB4120;
+}
